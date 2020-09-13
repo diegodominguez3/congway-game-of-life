@@ -1,0 +1,14 @@
+.Grid {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.Grid .actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}

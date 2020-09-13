@@ -1,0 +1,9 @@
+.Cell {
+    border: 0.5px solid black; 
+}
+
+.Cell:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
