@@ -7,8 +7,7 @@ class Grid extends Component {
     initialState = {
         cols: 20,
         rows: 30,
-        grid: [],
-        generation: 0
+        grid: []
     }
     constructor(props) {
         super(props);
@@ -30,7 +29,6 @@ class Grid extends Component {
     delayState() {
         setTimeout(() => {
             this.getNextGen();
-            this.setState({generation: this.state.generation + 1}); 
         }, 300);
     }
 
@@ -134,10 +132,6 @@ class Grid extends Component {
                             <input type="checkbox" name="public" checked={this.state.bounds} onChange = {this.handleBoundsToggle}/>
                             <label>Enable bounds</label>
                         </div>
-                    </div>
-                    <div style={{marginTop: '20px'}}>
-                        <p><b>Generation: </b>{this.state.generation}</p>
-                       
                     </div>
                     <div style={{marginTop: '20px'}}>{this.renderGrid()}</div>
                 </div>
